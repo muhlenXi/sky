@@ -1,5 +1,5 @@
 //
-//  SkyTests.swift
+//  WeatherDataManagerTest.swift
 //  SkyTests
 //
 //  Created by 席银军 on 2017/11/16.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import Sky
 
-class SkyTests: XCTestCase {
+class WeatherDataManagerTest: XCTestCase {
     
     override func setUp() {
         super.setUp()

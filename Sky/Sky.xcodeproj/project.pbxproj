@@ -12,9 +12,13 @@
 		DD67D9D21FBD822F0028C5C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD67D9D01FBD822F0028C5C3 /* Main.storyboard */; };
 		DD67D9D41FBD822F0028C5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD67D9D31FBD822F0028C5C3 /* Assets.xcassets */; };
 		DD67D9D71FBD822F0028C5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD67D9D51FBD822F0028C5C3 /* LaunchScreen.storyboard */; };
-		DD67D9E21FBD822F0028C5C3 /* SkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67D9E11FBD822F0028C5C3 /* SkyTests.swift */; };
 		DD67D9ED1FBD822F0028C5C3 /* SkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67D9EC1FBD822F0028C5C3 /* SkyUITests.swift */; };
 		DD67DA001FBD843D0028C5C3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD67D9FF1FBD843D0028C5C3 /* Default-568h@2x.png */; };
+		DD9E7CF21FBD93DF004E3A92 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E7CF11FBD93DF004E3A92 /* Configuration.swift */; };
+		DD9E7CF51FBD94F8004E3A92 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E7CF41FBD94F8004E3A92 /* Location.swift */; };
+		DD9E7CF71FBD95AA004E3A92 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E7CF61FBD95AA004E3A92 /* WeatherData.swift */; };
+		DD9E7CFA1FBD971D004E3A92 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E7CF91FBD971D004E3A92 /* WeatherDataManager.swift */; };
+		DD9E7CFC1FBD9FD6004E3A92 /* WeatherDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E7CFB1FBD9FD6004E3A92 /* WeatherDataManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +47,16 @@
 		DD67D9D61FBD822F0028C5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD67D9D81FBD822F0028C5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD67D9DD1FBD822F0028C5C3 /* SkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD67D9E11FBD822F0028C5C3 /* SkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyTests.swift; sourceTree = "<group>"; };
 		DD67D9E31FBD822F0028C5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD67D9E81FBD822F0028C5C3 /* SkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD67D9EC1FBD822F0028C5C3 /* SkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyUITests.swift; sourceTree = "<group>"; };
 		DD67D9EE1FBD822F0028C5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD67D9FF1FBD843D0028C5C3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DD9E7CF11FBD93DF004E3A92 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DD9E7CF41FBD94F8004E3A92 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DD9E7CF61FBD95AA004E3A92 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		DD9E7CF91FBD971D004E3A92 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		DD9E7CFB1FBD9FD6004E3A92 /* WeatherDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,9 @@
 		DD67D9CB1FBD822F0028C5C3 /* Sky */ = {
 			isa = PBXGroup;
 			children = (
+				DD9E7CF81FBD96E4004E3A92 /* Manager */,
+				DD9E7CF31FBD94DE004E3A92 /* Models */,
+				DD9E7CF01FBD93B2004E3A92 /* Configuration */,
 				DD67D9FA1FBD825E0028C5C3 /* Delegates */,
 				DD67D9FB1FBD83410028C5C3 /* Resources */,
 				DD67D9FC1FBD835F0028C5C3 /* Storyboards */,
@@ -112,8 +123,8 @@
 		DD67D9E01FBD822F0028C5C3 /* SkyTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD67D9E11FBD822F0028C5C3 /* SkyTests.swift */,
 				DD67D9E31FBD822F0028C5C3 /* Info.plist */,
+				DD9E7CFB1FBD9FD6004E3A92 /* WeatherDataManagerTest.swift */,
 			);
 			path = SkyTests;
 			sourceTree = "<group>";
@@ -166,6 +177,31 @@
 				DD67D9CE1FBD822F0028C5C3 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DD9E7CF01FBD93B2004E3A92 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E7CF11FBD93DF004E3A92 /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		DD9E7CF31FBD94DE004E3A92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E7CF41FBD94F8004E3A92 /* Location.swift */,
+				DD9E7CF61FBD95AA004E3A92 /* WeatherData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD9E7CF81FBD96E4004E3A92 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E7CF91FBD971D004E3A92 /* WeatherDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +276,7 @@
 					};
 					DD67D9DC1FBD822F0028C5C3 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DD67D9C81FBD822F0028C5C3;
 					};
@@ -303,7 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9E7CFA1FBD971D004E3A92 /* WeatherDataManager.swift in Sources */,
+				DD9E7CF21FBD93DF004E3A92 /* Configuration.swift in Sources */,
+				DD9E7CF71FBD95AA004E3A92 /* WeatherData.swift in Sources */,
 				DD67D9CF1FBD822F0028C5C3 /* ViewController.swift in Sources */,
+				DD9E7CF51FBD94F8004E3A92 /* Location.swift in Sources */,
 				DD67D9CD1FBD822F0028C5C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD67D9E21FBD822F0028C5C3 /* SkyTests.swift in Sources */,
+				DD9E7CFC1FBD9FD6004E3A92 /* WeatherDataManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,12 +544,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2GT9E6353;
 				INFOPLIST_FILE = SkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muhlenxi.SkyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sky.app/Sky";
@@ -520,6 +563,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2GT9E6353;
 				INFOPLIST_FILE = SkyTests/Info.plist;
