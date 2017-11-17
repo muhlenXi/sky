@@ -17,13 +17,15 @@ enum DataManagerError: Error {
 }
 
 final class WeatherDataManager {
-    private let baseURL: URL
+    internal let baseURL: URL
+    internal let urlSession: URLSessionProtocol
     
-    private init(baseURL: URL) {
+    internal init(baseURL: URL, urlSession: URLSessionProtocol) {
         self.baseURL = baseURL
+        self.urlSession = urlSession
     }
     
-    static let shared = WeatherDataManager(baseURL: API.authenticatedUrl)
+    static let shared = WeatherDataManager(baseURL: API.authenticatedUrl, urlSession: URLSession.shared)
     
     func weatherDataAt(latitude: Double,
                        longitude: Double,
@@ -37,7 +39,7 @@ final class WeatherDataManager {
         request.httpMethod = "GET"
         
         // 3. Launch the request
-        URLSession.shared.dataTask(with: request,
+        self.urlSession.dataTask(with: request,
                                    completionHandler: {
                                     (data, response, error) -> Void in
             self.didFinishGettingWeatherData(data: data,
@@ -48,7 +50,7 @@ final class WeatherDataManager {
         
     }
     
-    func didFinishGettingWeatherData(data: Data?,
+    private func didFinishGettingWeatherData(data: Data?,
                                      response: URLResponse?,
                                      error: Error?,
                                      completion: CompletionHandler) {
@@ -57,7 +59,9 @@ final class WeatherDataManager {
         } else if let data = data, let response = response as? HTTPURLResponse {
             if response.statusCode == 200 {
                 do {
-                    let weatherData = try JSONDecoder().decode(WeatherData.self, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .secondsSince1970
+                    let weatherData = try decoder.decode(WeatherData.self, from: data)
                     completion(weatherData, nil)
                 } catch {
                     completion(nil, .invalidResponse)
